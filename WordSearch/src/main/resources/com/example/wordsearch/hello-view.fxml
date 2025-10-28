@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.wordsearch.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wordsearch.HelloController">
+   <children>
+      <TextField fx:id="txtFieldSearch" layoutX="14.0" layoutY="29.0" prefHeight="25.0" prefWidth="498.0" />
+      <Button fx:id="btnSearch" layoutX="524.0" layoutY="29.0" mnemonicParsing="false" onAction="#onBtnSearchClick" text="Search" />
+      <Button layoutX="584.0" layoutY="29.0" mnemonicParsing="false" text="Settings" />
+      <Button layoutX="225.0" layoutY="407.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="406.0" text="Clear History" />
+      <Button fx:id="btnSearch2" layoutX="225.0" layoutY="225.0" mnemonicParsing="false" onAction="#onBtnSearch2Click" prefHeight="25.0" prefWidth="200.0" text="Search" />
+      <Button fx:id="btnSearch3" layoutX="428.0" layoutY="225.0" mnemonicParsing="false" onAction="#onBtnSearch3Click" prefHeight="25.0" prefWidth="200.0" text="Search" />
+      <Button fx:id="btnUpdate" layoutX="11.0" layoutY="407.0" mnemonicParsing="false" onAction="#onBtnUpdateClick" prefHeight="25.0" prefWidth="200.0" text="Update" />
+      <ListView fx:id="mainWordList" layoutX="11.0" layoutY="79.0" prefHeight="313.0" prefWidth="200.0" />
+      <ListView fx:id="secondaryWordList" layoutX="225.0" layoutY="79.0" prefHeight="135.0" prefWidth="200.0" />
+      <ListView fx:id="thirdWordList" layoutX="428.0" layoutY="79.0" prefHeight="135.0" prefWidth="200.0" />
+      <ListView fx:id="historyWordList" layoutX="225.0" layoutY="257.0" prefHeight="135.0" prefWidth="406.0" />
+   </children>
+</AnchorPane>
