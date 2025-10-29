@@ -1,14 +1,12 @@
-package com.example.wordsearch;
+package com.example.wordsearch.gui;
 
+import com.example.wordsearch.bll.HistoryLogic;
 import com.example.wordsearch.bll.WordsLogic;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.VBox;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -37,6 +35,16 @@ public class HelloController implements Initializable {
                     mainWordList.getItems().add(line);
 
                 }
+
+            }
+
+            HistoryLogic.sendHistory("Searched '" + txtFieldSearch.getText() + "' and found " + mainWordList.getItems().size() + " words.");
+
+            historyWordList.getItems().clear();
+
+            for (String line: HistoryLogic.getHistory().reversed()) {
+
+                historyWordList.getItems().add(line);
 
             }
 
@@ -90,6 +98,17 @@ public class HelloController implements Initializable {
             mainWordList.getItems().add(line);
 
         }
+
+
+    }
+
+    @FXML
+    protected void onBtnClearClick() {
+
+        historyWordList.getItems().clear();
+
+        HistoryLogic.clearHistory();
+
     }
 
     @Override
@@ -99,6 +118,11 @@ public class HelloController implements Initializable {
         btnSearch2.fire();
         btnSearch3.fire();
 
+        for (String line: HistoryLogic.getHistory().reversed()) {
+
+            historyWordList.getItems().add(line);
+
+        }
 
     }
 }

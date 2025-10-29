@@ -5,12 +5,12 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wordsearch.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wordsearch.gui.HelloController">
    <children>
       <TextField fx:id="txtFieldSearch" layoutX="14.0" layoutY="29.0" prefHeight="25.0" prefWidth="498.0" />
       <Button fx:id="btnSearch" layoutX="524.0" layoutY="29.0" mnemonicParsing="false" onAction="#onBtnSearchClick" text="Search" />
       <Button layoutX="584.0" layoutY="29.0" mnemonicParsing="false" text="Settings" />
-      <Button layoutX="225.0" layoutY="407.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="406.0" text="Clear History" />
+      <Button fx:id="btnClear" layoutX="225.0" layoutY="407.0" mnemonicParsing="false" onAction="#onBtnClearClick" prefHeight="25.0" prefWidth="406.0" text="Clear History" />
       <Button fx:id="btnSearch2" layoutX="225.0" layoutY="225.0" mnemonicParsing="false" onAction="#onBtnSearch2Click" prefHeight="25.0" prefWidth="200.0" text="Search" />
       <Button fx:id="btnSearch3" layoutX="428.0" layoutY="225.0" mnemonicParsing="false" onAction="#onBtnSearch3Click" prefHeight="25.0" prefWidth="200.0" text="Search" />
       <Button fx:id="btnUpdate" layoutX="11.0" layoutY="407.0" mnemonicParsing="false" onAction="#onBtnUpdateClick" prefHeight="25.0" prefWidth="200.0" text="Update" />
